@@ -113,3 +113,23 @@ Set environment variables in Vercel:
 VITE_API_URL=<your-backend-url>
 Access the deployed app at the Vercel URL (e.g., https://your-frontend.vercel.app).
 ```
+
+## Project Structure
+```
+real-time-notes/
+├── backend/
+│   ├── server.js         # Express + Socket.io backend
+│   ├── .env             # Backend environment variables
+│   └── package.json
+├── frontend/
+│   ├── src/
+│   │   ├── components/  # React components (RoomJoin, NoteEditor, etc.)
+│   │   ├── contexts/    # Socket.io context
+│   │   ├── App.jsx      # Main app component
+│   │   ├── main.jsx     # Entry point
+│   │   └── index.css    # Tailwind CSS and animations
+│   ├── .env            # Frontend environment variables
+│   ├── index.html      # Vite entry point
+│   └── package.json
+└── README.md           
+```
