@@ -48,97 +48,68 @@ Install dependencies:
 npm install
 ```
 Create a .env file in backend/:
-text
-
-Collapse
-
-Wrap
-
-Copy
+```
 PORT=5000
 FRONTEND_URL=http://localhost:5173
+```
 # Optional: Add for MongoDB
 # MONGO_URI=mongodb://localhost:27017/real-time-notes
 Start the backend:
-bash
-
-Collapse
-
-Wrap
-
-Copy
+```
 node server.js
+```
+
 3. Frontend Setup
+
 Navigate to the frontend folder:
-bash
-
-Collapse
-
-Wrap
-
-Copy
+```
 cd ../frontend
 Install dependencies:
-bash
-
-Collapse
-
-Wrap
-
-Copy
 npm install
+```
 Create a .env file in frontend/:
-text
-
-Collapse
-
-Wrap
-
-Copy
+```
 VITE_API_URL=http://localhost:5000
+```
 Start the frontend:
-bash
-
-Collapse
-
-Wrap
-
-Copy
+```
 npm run dev
+```
 4. Test Locally
+
 Open http://localhost:5173 in your browser.
+
 Join or create a room, add/edit notes, and test real-time features with multiple tabs.
-Key Real-Time Concepts
-WebSockets: Socket.io enables bi-directional communication between the client and server, powering live updates for notes, user presence, and notifications.
-Rooms: Socket.io’s room feature isolates collaboration to specific groups, ensuring updates only reach relevant users.
-Events: Custom events (noteEdit, typing, joinRoom) handle real-time interactions efficiently.
-Deployment
+
+## Key Real-Time Concepts
+- WebSockets: Socket.io enables bi-directional communication between the client and server, powering live - updates for notes, user presence, and notifications.
+- Rooms: Socket.io’s room feature isolates collaboration to specific groups, ensuring updates only reach relevant users.
+- Events: Custom events (noteEdit, typing, joinRoom) handle real-time interactions efficiently.
+### Deployment
 Backend (e.g., Render)
+
 Push the backend folder to a GitHub repository.
+
 Deploy on Render:
+
 Set environment variables in the Render dashboard:
-text
-
-Collapse
-
-Wrap
-
-Copy
+```
 PORT=5000
 FRONTEND_URL=<your-vercel-url>
+```
 # Optional: MONGO_URI=<your-mongo-uri>
 Command: node server.js
+
 Note the deployed URL (e.g., https://your-backend.onrender.com).
+
 Frontend (e.g., Vercel)
+
 Push the frontend folder to a GitHub repository.
+
 Deploy on Vercel:
+
 Set environment variables in Vercel:
-text
-
-Collapse
-
-Wrap
-
-Copy
+```
 VITE_API_URL=<your-backend-url>
 Access the deployed app at the Vercel URL (e.g., https://your-frontend.vercel.app).
+```
